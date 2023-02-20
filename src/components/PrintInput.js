@@ -14,7 +14,7 @@ const PrintInput = () => {
     <div>
       {print ? <p>{data}</p> : null}
       <input type="text" onChange={getdata} />
-      <button onClick={() => setPrint(true)}>print data by click</button>
+      <button onClick={() => setPrint(true)}>print data by click on it</button>
     </div>
   );
 };
