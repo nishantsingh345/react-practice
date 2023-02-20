@@ -1,12 +1,47 @@
-import { React } from "react";
+import { React, useState } from "react";
+import "./App.css";
 import States from "./components/States";
-import User from "./User";
+import Props from "./components/Props";
+import PrintInput from "./components/PrintInput";
+import HideandShow from "./components/HideandShow";
 
 function App() {
+  const [name, setNmae] = useState("Nishant");
+
+  function changename() {
+    setNmae("Rajnish singh");
+  }
+
   return (
     <div className="App">
+      <HideandShow />
       <States />
-      <User />
+      <PrintInput />
+
+      <>
+        <Props
+          name={name}
+          email={"nishantsingh123@gmil.com"}
+          other={{ address: "delhi", mobile: "000" }}
+        />
+        <Props
+          name={"raju"}
+          email={"nishantsingh123@gmil.com"}
+          other={{ address: "delhi", mobile: "000" }}
+        />
+        <Props
+          name={"bikaji"}
+          email={"nishantsingh123@gmil.com"}
+          other={{ address: "delhi", mobile: "000" }}
+        />
+        <button
+          onClick={() => {
+            changename();
+          }}
+        >
+          Click Me to change the name
+        </button>
+      </>
     </div>
   );
 }
