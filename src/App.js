@@ -4,6 +4,7 @@ import States from "./components/States";
 import Props from "./components/Props";
 import PrintInput from "./components/PrintInput";
 import HideandShow from "./components/HideandShow";
+import Form from "./components/Form";
 
 function App() {
   const [name, setNmae] = useState("Nishant");
@@ -14,6 +15,7 @@ function App() {
 
   return (
     <div className="App">
+      <Form />
       <HideandShow />
       <States />
       <PrintInput />
