@@ -29,7 +29,7 @@ const Form = () => {
         >
           <option>DC</option>
           <option>Marvel</option>
-          <option>lucy</option>
+          <option>bollywood</option>
         </select>
         <br />
         <br />
