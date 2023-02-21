@@ -5,6 +5,7 @@ import Props from "./components/Props";
 import PrintInput from "./components/PrintInput";
 import HideandShow from "./components/HideandShow";
 import Form from "./components/Form";
+import Conditinoal from "./components/Conditinoal";
 
 function App() {
   const [name, setNmae] = useState("Nishant");
@@ -15,7 +16,8 @@ function App() {
 
   return (
     <div className="App">
-      <Form />
+      <Conditinoal />
+      {/* <Form />
       <HideandShow />
       <States />
       <PrintInput />
@@ -43,7 +45,7 @@ function App() {
         >
           Click Me to change the name
         </button>
-      </>
+      </> */}
     </div>
   );
 }
