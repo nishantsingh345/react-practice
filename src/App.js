@@ -6,6 +6,7 @@ import PrintInput from "./components/PrintInput";
 import HideandShow from "./components/HideandShow";
 import Form from "./components/Form";
 import Conditinoal from "./components/Conditinoal";
+import PassfuncProps from "./components/PassfuncProps";
 
 function App() {
   const [name, setNmae] = useState("Nishant");
@@ -13,10 +14,14 @@ function App() {
   function changename() {
     setNmae("Rajnish singh");
   }
+  function aleet() {
+    alert("Rajnish singh");
+  }
 
   return (
     <div className="App">
-      <Conditinoal />
+      <PassfuncProps data={aleet} />
+      {/* <Conditinoal /> */}
       {/* <Form />
       <HideandShow />
       <States />
