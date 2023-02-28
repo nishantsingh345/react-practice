@@ -1,5 +1,8 @@
-function User() {
-  return <div>hello iam Nishant singgh</div>;
-}
+import React from "react";
+import {} from "react-router-dom";
+
+const User = () => {
+  return <div>User</div>;
+};
 
 export default User;

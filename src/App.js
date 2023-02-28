@@ -7,8 +7,18 @@ import HideandShow from "./components/HideandShow";
 import Form from "./components/Form";
 import Conditinoal from "./components/Conditinoal";
 import PassfuncProps from "./components/PassfuncProps";
+import User from "./User";
+import { BrowserRouter as Router, Routes, Link, Route } from "react-router-dom";
 
 function App() {
+  const users = [
+    { id: 1, name: "nishu", email: "nishu@.com" },
+    { id: 2, name: "raju", email: "raju@.com" },
+    { id: 3, name: "amish", email: "amish@.com" },
+    { id: 4, name: "mahua", email: "mahua@.com" },
+    { id: 5, name: "rahu", email: "rahu@.com" },
+  ];
+
   const [name, setNmae] = useState("Nishant");
 
   function changename() {
@@ -20,7 +30,23 @@ function App() {
 
   return (
     <div className="App">
-      <PassfuncProps data={aleet} />
+      <Router>
+        {users.map((item) => (
+          <div>
+            {" "}
+            <Link to={"/user/" + item.id}>
+              <h1> {item.name}</h1>
+            </Link>
+          </div>
+        ))}
+        {/* <Routes>
+          <Route path="/user/:id">
+            <User />
+          </Route>
+        </Routes> */}
+      </Router>
+
+      {/* <PassfuncProps data={aleet} /> */}
       {/* <Conditinoal /> */}
       {/* <Form />
       <HideandShow />
